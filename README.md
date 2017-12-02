@@ -8,3 +8,5 @@
 1. 把 ShadowsocksR-win 中的 gui-config.json 复制到根目录下
 
 2. python3 local.py
+
+3. haproxy -f haproxy.cfg
