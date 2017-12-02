@@ -1,14 +1,17 @@
 # -*- coding: utf-8 -*-
+from collections import OrderedDict
+
+
 class Haproxy:
     def __init__(self):
-        self.section = dict()
+        self.section = OrderedDict()
 
     def add_section(self, section):
         if type(section) is not str:
             return
 
         if -1 == self.section.get(section, -1):
-            self.section[section] = dict()
+            self.section[section] = OrderedDict()
 
     def set(self, section, option, value=None):
         if type(section) is not str:
