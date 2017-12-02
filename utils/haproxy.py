@@ -33,6 +33,7 @@ class Haproxy:
                 fp.write(' ')
                 fp.write(v)
                 fp.write('\n')
+            fp.write('\n')
 
 
 if __name__ == "__main__":
@@ -65,11 +66,11 @@ if __name__ == "__main__":
     conf.set("listen admin_stats", "option", 'httplog')
     conf.set("listen admin_stats", "maxconn", str(10))
     conf.set("listen admin_stats", "stats refresh", '30s')
-    conf.set("listen admin_stats", "uri", '/haproxy')
-    conf.set("listen admin_stats", "realm", 'Haproxy')
-    conf.set("listen admin_stats", "auth", 'admin:admin')
-    conf.set("listen admin_stats", "hide-version", '')
-    conf.set("listen admin_stats", "admin", 'if TRUE')
+    conf.set("listen admin_stats", "stats uri", '/haproxy')
+    conf.set("listen admin_stats", "stats realm", 'Haproxy')
+    conf.set("listen admin_stats", "stats auth", 'admin:admin')
+    conf.set("listen admin_stats", "stats hide-version", '')
+    conf.set("listen admin_stats", "stats admin", 'if TRUE')
 
     conf.add_section('frontend ss-in')
     conf.set("frontend ss-in", "bind", '127.0.0.1:8388')

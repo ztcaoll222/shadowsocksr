@@ -156,9 +156,9 @@ def write_cfg(server_list, passwd, filename):
     conf.set("defaults", "retries", str(3))
     conf.set("defaults", "option", 'abortonclose')
     conf.set("defaults", "maxconn", str(8192))
-    conf.set("defaults", "timeout", 'connect 5000ms')
-    conf.set("defaults", "timeout", 'client 30000ms')
-    conf.set("defaults", "timeout", 'server 30000ms')
+    conf.set("defaults", "timeout connect", '5000ms')
+    conf.set("defaults", "timeout client", '30000ms')
+    conf.set("defaults", "timeout server", '30000ms')
     conf.set("defaults", "balance", 'roundrobin')
     conf.set("defaults", "log", 'global')
 
