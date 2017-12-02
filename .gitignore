@@ -35,3 +35,4 @@ user-config.json
 userapiconfig.py
 usermysql.json
 gui-config.json
+haproxy.cfg
