@@ -9,11 +9,7 @@ import sys
 import os
 import logging
 import signal
-from configparser import ConfigParser
 from multiprocessing.pool import Pool
-
-from pyhaproxy.parse import Parser
-from pyhaproxy.render import Render
 
 from shadowsocks.common import to_bytes, to_str
 from shadowsocks import shell, daemon, eventloop, tcprelay, udprelay, asyncdns
